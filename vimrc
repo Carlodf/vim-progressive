@@ -7,6 +7,9 @@ filetype plugin indent on
 
 set encoding=utf-8
 
+
+" Config files ----------------------------------------------------------- {{{1
+
 " Divide configuration in different files
 let $MYVIMRC = $HOME . '/.vim/vimrc'
 let $PPXSET = $HOME . '/.vim/ppx/settings.vim'

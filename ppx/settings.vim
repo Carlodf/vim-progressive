@@ -1,3 +1,6 @@
+" SETTINGS
+
+" Syntax and colors------------------------------------------------------- {{{1
 " Try to force using 256 colors.
 if (&term =~ "xterm") || (&term =~ "screen")
     set t_Co=256
@@ -21,14 +24,18 @@ if &t_Co == 256
     endif
 endif
 
+
+" Text formatting--------------------------------------------------------- {{{1
+
 " Indentation and tabs settings
 set tabstop=4       " number of columns for <Tab>
 set softtabstop=4   " <Tab> columns for editing operations
 set shiftwidth=4    " number of spaces for indentation
 set expandtab       " replace <Tab> with spaces
 
-" managing various vim meta-data files (viminfo, backup, swp, undo)
+" Metadata files---------------------------------------------------------- {{{1
 
+" managing various vim meta-data files (viminfo, backup, swp, undo)
 if isdirectory('/home/pappix/.vim/tmp')
 
     " echo an error message if the info file is not readable
@@ -55,6 +62,9 @@ if isdirectory('/home/pappix/.vim/tmp')
         set udir=/home/pappix/.vim/tmp/swp/undo        " custom dir for undo files
     endif
 endif
+
+
+" EOF--------------------------------------------------------------------- {{{1
 
 " LEAVE AT END OF FILE
 " Global variable to signal settings have been sourced.
