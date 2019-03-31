@@ -9,7 +9,7 @@ vim8 configuration
 ### Insert mode
 
 ```
-jk          exit form insert mode
+jk          exit from insert mode
 ```
 
 ### Normal mode
@@ -20,3 +20,8 @@ jk          exit form insert mode
 <C-k>       move to up split
 <C-l>       move to right split
 ```
+
+## Filetype specific configurations
+
+### Markdown
+- enable spell check
