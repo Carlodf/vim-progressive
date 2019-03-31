@@ -29,4 +29,7 @@ jk          exit from insert mode
 ## Filetype specific configurations
 
 ### Markdown
-- enable spell check
+- spell check (en-GB)
+
+### Vim files
+- Folding using markers
