@@ -1,8 +1,13 @@
 # vim-progressive
 vim8 configuration
 
-## Colorscheme
+## Settings
+
+### Colorscheme
 [Badwolf](http://stevelosh.com/projects/badwolf/)
+
+### Metadata (undo, swp, info, backup)
+- force all metadata files to predefined paths
 
 ## Mappings
 

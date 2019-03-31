@@ -27,6 +27,35 @@ set softtabstop=4   " <Tab> columns for editing operations
 set shiftwidth=4    " number of spaces for indentation
 set expandtab       " replace <Tab> with spaces
 
+" managing various vim meta-data files (viminfo, backup, swp, undo)
+
+if isdirectory('/home/pappix/.vim/tmp')
+
+    " echo an error message if the info file is not readable
+    if !empty(glob(expand('/home/pappix/.vim/tmp/viminfo')))
+        if !filereadable('/home/pappix/.vim/tmp/viminfo')
+            echoerr expand('warning: /home/pappix/.vim/tmp/viminfo not readable')
+        endif
+    endif
+
+    set viminfo+=n$ppxtmp/viminfo " set custom directory for info files
+
+    if exists('$sudo_user')
+        set nobackup                    " avoid root-owned files
+        set nowritebackup               " avoid root-owned files
+        set noswapfile                  " avoid root-owned files
+    else
+        set backupdir=/home/pappix/.vim/tmp/backup  " custom dir for backup files
+        set directory=/home/pappix/.vim/tmp/swp     " custom dir for swap files
+    endif
+
+    if has('persistent_undo')
+        " automatically save undo history to an undo file
+        set udf
+        set udir=/home/pappix/.vim/tmp/swp/undo        " custom dir for undo files
+    endif
+endif
+
 " LEAVE AT END OF FILE
 " Global variable to signal settings have been sourced.
 let g:ppx_settings = 1
