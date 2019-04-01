@@ -25,6 +25,10 @@ if &t_Co == 256
     let &colorcolumn="80,".join(range(120,120),",")
 endif
 
+if has('syntax')
+    set cursorline
+endif
+
 
 " Text formatting--------------------------------------------------------- {{{1
 
@@ -33,6 +37,18 @@ set tabstop=4       " number of columns for <Tab>
 set softtabstop=4   " <Tab> columns for editing operations
 set shiftwidth=4    " number of spaces for indentation
 set expandtab       " replace <Tab> with spaces
+
+" Editor workspace descriptors
+set number                              " show line number
+set relativenumber                      " show relative line number
+set list                                " shoe invisible characters
+set listchars=tab:▸\ ,eol:¬,extends:»,precedes:«,trail:•,nbsp:‡
+set laststatus=2                        " Always show status line
+
+if has('cmdline_info')
+    set ruler                           " show the cursor position all the time
+    set showcmd                         " display incomplete commands
+endif
 
 
 " Windows managment------------------------------------------------------- {{{1
