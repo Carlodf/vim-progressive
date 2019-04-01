@@ -1,6 +1,10 @@
 let mapleader="\\"
 let maplocalleader=","
 
+" make sure functions are sourced
+if g:ppx_functions == 0
+    source $PPXFUN
+endif
 
 " Config files editing---------------------------------------------------- {{{1
 
@@ -24,6 +28,10 @@ nnoremap <c-h> <c-w><c-h>
 nnoremap <c-l> <c-w><c-l>
 nnoremap <c-j> <c-w><c-j>
 nnoremap <c-k> <c-w><c-k>
+
+" Toggle view port size fullscreen/equalsize
+nnoremap <silent> <leader>tf :call ToggleFullscreenWindows()<CR>
+"
 
 " DISABLED---------------------------------------------------------------- {{{1
 " Mapping to train.
