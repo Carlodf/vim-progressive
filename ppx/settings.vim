@@ -22,6 +22,7 @@ if &t_Co == 256
     if functions#colorscheme('badwolf')
         colorscheme badwolf
     endif
+    let &colorcolumn="80,".join(range(120,120),",")
 endif
 
 
