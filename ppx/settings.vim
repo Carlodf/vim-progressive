@@ -60,6 +60,13 @@ if has('windows')
     set splitbelow " orizontal split defaults below
 endif
 
+" netrw settings---------------------------------------------------------- {{{1
+let g:netrw_liststyle = 3           " tree like view
+let g:netrw_banner = 0              " don't show top banner
+let g:netrw_browse_split = 4        " open file in previouw viewport
+let g:netrw_altv = 1                " open in vertical viewport
+let g:netrw_winsize = 85            " netrw split size to 15% of the width
+
 " Metadata files---------------------------------------------------------- {{{1
 
 " managing various vim meta-data files (viminfo, backup, swp, undo)
