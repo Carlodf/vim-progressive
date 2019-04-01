@@ -33,6 +33,16 @@ set softtabstop=4   " <Tab> columns for editing operations
 set shiftwidth=4    " number of spaces for indentation
 set expandtab       " replace <Tab> with spaces
 
+
+" Windows managment------------------------------------------------------- {{{1
+if has('vertsplit')
+    set splitright " vertical split defaults to the right
+endif
+
+if has('windows')
+    set splitbelow " orizontal split defaults below
+endif
+
 " Metadata files---------------------------------------------------------- {{{1
 
 " managing various vim meta-data files (viminfo, backup, swp, undo)

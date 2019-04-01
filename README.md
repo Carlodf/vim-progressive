@@ -6,6 +6,10 @@ vim8 configuration
 ### Colorscheme
 [Badwolf](http://stevelosh.com/projects/badwolf/)
 
+### Windows management
+- vertical split opens a new viewport to the right
+- horizontal split opens a new viewport below
+
 ### Metadata (undo, swp, info, backup)
 - force all metadata files to predefined paths
 
