@@ -21,13 +21,16 @@ nnoremap <leader>sv :source $MYVIMRC <cr>
 " Use jk to exit inser mode
 inoremap jk <esc>
 
-" Noemal mode------------------------------------------------------------- {{{1
+" Normal mode------------------------------------------------------------- {{{1
 
 " Easier mappings for moving within splits
 nnoremap <c-h> <c-w><c-h>
 nnoremap <c-l> <c-w><c-l>
 nnoremap <c-j> <c-w><c-j>
 nnoremap <c-k> <c-w><c-k>
+
+" Go to file opens in a vertical split
+nnoremap <leader>gf :vertical wincmd f<CR>
 
 " Toggle view port size fullscreen/equalsize
 nnoremap <silent> <leader>tf :call ToggleFullscreenWindows()<CR>
