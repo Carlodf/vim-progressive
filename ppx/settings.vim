@@ -45,6 +45,11 @@ set list                                " shoe invisible characters
 set listchars=tab:▸\ ,eol:¬,extends:»,precedes:«,trail:•,nbsp:‡
 set laststatus=2                        " Always show status line
 
+if v:version > 703 || (v:version == 703 && has('patch541'))
+    " remove comment leader when joining lines
+    set formatoptions+=j
+endif
+
 " Vim status bar and commands completion --------------------------------- {{{1
 
 if has('cmdline_info')
