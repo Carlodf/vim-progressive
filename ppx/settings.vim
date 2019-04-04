@@ -59,6 +59,17 @@ if has('wildmenu')
     set wildmode=list,full
 endif
 
+" When there is a previous search pattern, highlight all its matches.
+if has('extra_search')
+    set hlsearch
+" Do incremental searching when it's possible to timeout.
+    if has('reltime')
+" Display the match for a search pattern when halfway
+" typing it.
+      set incsearch
+    endif
+endif
+
 " Windows managment------------------------------------------------------- {{{1
 if has('vertsplit')
     set splitright " vertical split defaults to the right
