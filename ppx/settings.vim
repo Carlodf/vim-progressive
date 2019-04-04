@@ -45,11 +45,19 @@ set list                                " shoe invisible characters
 set listchars=tab:▸\ ,eol:¬,extends:»,precedes:«,trail:•,nbsp:‡
 set laststatus=2                        " Always show status line
 
+" Vim status bar and commands completion --------------------------------- {{{1
+
 if has('cmdline_info')
     set ruler                           " show the cursor position all the time
     set showcmd                         " display incomplete commands
 endif
 
+if has('wildmenu')
+" display completion matches in a status line
+    set wildmenu
+" When more than one match, list all matches and complete first match.
+    set wildmode=list,full
+endif
 
 " Windows managment------------------------------------------------------- {{{1
 if has('vertsplit')
