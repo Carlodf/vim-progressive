@@ -27,6 +27,23 @@ function! ToggleFullscreenWindows()
     endif
 endfunction
 
+" functions#diffWithSaved ------------------------------------------------ {{{1
+
+function! functions#diffWithSaved()
+" Save file type
+  let filetype=&ft
+" Create a new split from original file
+  vert new | r ++edit # | 0d_
+" Set the buffer in nofile mode
+  exe "setlocal bt=nofile"
+" Copy the file type to the new split
+  exe "setlocal ft=" .filetype
+" Diff split with the original file
+  diffthis
+" Diff the split with the changed file and move the cursor to right split
+  wincmd p | diffthis | wincmd l
+endfunction
+
 " EOF--------------------------------------------------------------------- {{{1
 " LEAVE AT END OF FILE
 " Global variable to signal the functions have been sourced.
