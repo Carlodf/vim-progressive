@@ -1,3 +1,4 @@
+" Boilerplate ------------------------------------------------------------ {{{1
 " Set nocp to never start in Vi compatibility mode which might restrict/modify
 " the behavior.
 set nocp

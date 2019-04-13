@@ -16,14 +16,16 @@ if g:ppx_functions == 0
     source $PPXFUN
 endif
 
-" Load colorscheme if present and 256 colors supported.
 if &t_Co == 256
     set background=dark
-    if functions#colorscheme('badwolf')
-        colorscheme badwolf
+    if functions#colorscheme('solarized')
+        let g:solarized_visibility='low'
+        let g:solarized_termcolors=256
+        colorscheme solarized
     endif
     let &colorcolumn="80,".join(range(120,120),",")
 endif
+
 
 if has('syntax')
     set cursorline

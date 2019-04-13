@@ -20,4 +20,5 @@ augroup END
 augroup vim_file_group
     autocmd!
     autocmd Filetype vim setlocal foldmethod=marker
+    autocmd Filetype vim setlocal foldcolumn=2
 augroup END
