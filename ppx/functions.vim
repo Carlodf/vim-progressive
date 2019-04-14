@@ -29,6 +29,7 @@ endfunction
 
 " functions#diffWithSaved ------------------------------------------------ {{{1
 
+" " Performs a diff between a modified buffer and its latest saved version.
 function! functions#diffWithSaved()
 " Save file type
   let filetype=&ft

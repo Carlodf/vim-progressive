@@ -93,12 +93,16 @@ let g:netrw_browse_split = 4        " open file in previouw viewport
 let g:netrw_altv = 1                " open in vertical viewport
 let g:netrw_winsize = 85            " netrw split size to 15% of the width
 
+
+" status line ------------------------------------------------------------ {{{1
+if exists('g:loaded_fugitive')
+    set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+endif
+
 " Metadata files---------------------------------------------------------- {{{1
 
 " managing various vim meta-data files (viminfo, backup, swp, undo)
-if has('nvim')
-    finish
-elseif isdirectory('/home/pappix/.vim/tmp')
+if !has('nvim') && isdirectory('/home/pappix/.vim/tmp')
 
     " echo an error message if the info file is not readable
     if !empty(glob(expand('/home/pappix/.vim/tmp/viminfo')))
