@@ -102,16 +102,18 @@ endif
 " Metadata files---------------------------------------------------------- {{{1
 
 " managing various vim meta-data files (viminfo, backup, swp, undo)
-if !has('nvim') && isdirectory('/home/pappix/.vim/tmp')
+if !has('nvim') && isdirectory($PPXTMP)
+    echom "OK TMP"
+    let $INFOPATH = $PPXTMP . '/viminfo'
 
     " echo an error message if the info file is not readable
-    if !empty(glob(expand('/home/pappix/.vim/tmp/viminfo')))
-        if !filereadable('/home/pappix/.vim/tmp/viminfo')
-            echoerr expand('warning: /home/pappix/.vim/tmp/viminfo not readable')
+    if !empty(glob(expand($INFOPATH)))
+        if !filereadable($INFOPATH)
+            echoerr expand('warning: ' . $INFOPATH . ' not readable')
         endif
     endif
 
-    set viminfo+=n$PPXTMP/viminfo " set custom directory for info files
+    set viminfo+=n$INFOPATH " set custom directory for info files
 
     if exists('$sudo_user')
         set nobackup                    " avoid root-owned files
