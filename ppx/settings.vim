@@ -96,7 +96,9 @@ let g:netrw_winsize = 85            " netrw split size to 15% of the width
 " Metadata files---------------------------------------------------------- {{{1
 
 " managing various vim meta-data files (viminfo, backup, swp, undo)
-if isdirectory('/home/pappix/.vim/tmp')
+if has('nvim')
+    finish
+elseif isdirectory('/home/pappix/.vim/tmp')
 
     " echo an error message if the info file is not readable
     if !empty(glob(expand('/home/pappix/.vim/tmp/viminfo')))
@@ -105,7 +107,7 @@ if isdirectory('/home/pappix/.vim/tmp')
         endif
     endif
 
-    set viminfo+=n$ppxtmp/viminfo " set custom directory for info files
+    set viminfo+=n$PPXTMP/viminfo " set custom directory for info files
 
     if exists('$sudo_user')
         set nobackup                    " avoid root-owned files
