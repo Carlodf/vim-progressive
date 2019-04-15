@@ -103,7 +103,6 @@ endif
 
 " managing various vim meta-data files (viminfo, backup, swp, undo)
 if !has('nvim') && isdirectory($PPXTMP)
-    echom "OK TMP"
     let $INFOPATH = $PPXTMP . '/viminfo'
 
     " echo an error message if the info file is not readable
