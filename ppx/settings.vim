@@ -77,6 +77,12 @@ if has('extra_search')
     endif
 endif
 
+" Allows to recursively search files in subdirectoried of the current work
+" directory.
+if has('path_extra')
+    set path+=**/*
+endif
+
 " Windows managment------------------------------------------------------- {{{1
 if has('vertsplit')
     set splitright " vertical split defaults to the right
