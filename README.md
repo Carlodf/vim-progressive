@@ -5,6 +5,7 @@ vim8 configuration
 
 The settings assume the following directory structure to be amanually added:
 
+```
 .vim
 │
 └── tmp
@@ -12,6 +13,7 @@ The settings assume the following directory structure to be amanually added:
     ├── swp
     │   └── undo
     └── viminfo
+```
 
 ```
 git clone --recurse-submodules -j8 git@github.com:Carlodf/vim-progressive.git
