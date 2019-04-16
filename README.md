@@ -1,6 +1,18 @@
 # vim-progressive
 vim8 configuration
 
+## Install
+```
+git clone --recurse-submodules -j8 git@github.com:Carlodf/vim-progressive.git
+~/.vim
+```
+If already cloned and missing the sub modules (plug ins):
+
+```
+cd ~/.vim
+git submodule update --init --recursive
+```
+
 ## Custom Settings
 
 - colour scheme [solarized](https://github.com/altercation/vim-colors-solarized)
