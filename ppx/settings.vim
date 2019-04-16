@@ -110,6 +110,9 @@ endif
 " managing various vim meta-data files (viminfo, backup, swp, undo)
 if !has('nvim') && isdirectory($PPXTMP)
     let $INFOPATH = $PPXTMP . '/viminfo'
+    let $PPXBKP = $PPXTMP . '/backup'
+    let $PPXDIR= $PPXTMP . '/swp'
+    let $PPXUNDO= $PPXDIR . '/undo'
 
     " echo an error message if the info file is not readable
     if !empty(glob(expand($INFOPATH)))
@@ -125,14 +128,14 @@ if !has('nvim') && isdirectory($PPXTMP)
         set nowritebackup               " avoid root-owned files
         set noswapfile                  " avoid root-owned files
     else
-        set backupdir=/home/pappix/.vim/tmp/backup  " custom dir for backup files
-        set directory=/home/pappix/.vim/tmp/swp     " custom dir for swap files
+        set backupdir=$PPXBKP " custom dir for backup files
+        set directory=$PPXDIR " custom dir for swap files
     endif
 
     if has('persistent_undo')
         " automatically save undo history to an undo file
         set udf
-        set udir=/home/pappix/.vim/tmp/swp/undo        " custom dir for undo files
+        set udir=$PPXUNDO " custom dir for undo files
     endif
 endif
 
