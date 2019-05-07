@@ -109,9 +109,9 @@ endif
 
 " managing various vim meta-data files (viminfo, backup, swp, undo)
 if !has('nvim') && isdirectory($PPXTMP)
-    let $INFOPATH = $PPXTMP . '/viminfo'
-    let $PPXBKP = $PPXTMP . '/backup'
-    let $PPXDIR= $PPXTMP . '/swp'
+    let $INFOPATH = $PPX . '/viminfo'
+    let $PPXBKP = $PPX . '/backup'
+    let $PPXDIR= $PPX . '/swp'
     let $PPXUNDO= $PPXDIR . '/undo'
 
     " echo an error message if the info file is not readable

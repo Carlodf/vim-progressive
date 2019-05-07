@@ -17,7 +17,8 @@ let $PPXSET = $HOME . '/.vim/ppx/settings.vim'
 let $PPXFUN = $HOME . '/.vim/ppx/functions.vim'
 let $PPXMAP = $HOME . '/.vim/ppx/mappings.vim'
 let $PPXAUG = $HOME . '/.vim/ppx/augroups.vim'
-let $PPXTMP = $HOME . '/.vim/tmp'
+let $PPX = $HOME . '/.vim/ppx'
+let $PPXTMP = $HOME . '/.vim/ppx/tmp'
 " Declare variables to verify files have been sourced
 let g:ppx_functions = 0
 let g:ppx_settings = 0
