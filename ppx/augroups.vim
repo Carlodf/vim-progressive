@@ -36,6 +36,8 @@ function ppx#augroups#SetPythonOptions()
     setlocal shiftwidth=4
     setlocal textwidth=79
     setlocal expandtab
+    setlocal foldmethod=indent
+    setlocal foldlevel=99
     setlocal autoindent
     setlocal fileformat=unix
     setlocal nolisp
