@@ -19,6 +19,9 @@ let $PPXMAP = $HOME . '/.vim/ppx/mappings.vim'
 let $PPXAUG = $HOME . '/.vim/ppx/augroups.vim'
 let $PPX = $HOME . '/.vim/ppx'
 let $PPXTMP = $HOME . '/.vim/ppx/tmp'
+
+" Temporary way of sourcing this file (should probably just go in autoload)
+let $PPXPY = $PPX . '/python_indent.vim'
 " Declare variables to verify files have been sourced
 let g:ppx_functions = 0
 let g:ppx_settings = 0
@@ -32,6 +35,7 @@ source $PPXMAP
 " AUGROUPS
 if has("autocmd")
     source $PPXAUG
+    source $PPXPY
 endif
 
 " Convenient command to see the difference between the current buffer and the
