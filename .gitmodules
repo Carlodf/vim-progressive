@@ -7,3 +7,9 @@
 [submodule "pack/bundle/start/undotree"]
 	path = pack/bundle/start/undotree
 	url = git@github.com:mbbill/undotree.git
+[submodule "pack/YouCompleteMe"]
+	path = pack/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "pack/bundle/start/ycm"]
+	path = pack/bundle/start/ycm
+	url = https://github.com/Valloric/YouCompleteMe.git

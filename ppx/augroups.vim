@@ -27,7 +27,7 @@ augroup END
 
 augroup python_file_group
     autocmd!
-    autocmd BufNewFile,BufRead *.py call ppx#augroups#SetPythonOptions()
+    autocmd FileType python call ppx#augroups#SetPythonOptions()
 augroup END
 
 function ppx#augroups#SetPythonOptions()
