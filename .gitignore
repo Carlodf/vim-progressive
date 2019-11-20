@@ -1,2 +1,6 @@
 tmp/*
 .netrwhist
+ppx/swp/
+ppx/tmp/
+ppx/viminfo
+spell/
