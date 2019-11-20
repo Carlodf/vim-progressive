@@ -109,6 +109,19 @@ let g:jedi#usages_command = "<leader>gu"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>gr"
 
+" syntastic settings------------------------------------------------------ {{{1
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_python_pyflakes_exe = 'python3 -m pyflakes'
+let g:syntastic_python_python_exec = '/usr/bin/python3'
+let g:syntastic_python_checkers = ['pyflakes']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " status line ------------------------------------------------------------ {{{1
 if exists('g:loaded_fugitive')
     set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P

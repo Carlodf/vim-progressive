@@ -13,3 +13,6 @@
 [submodule "pack/bundle/start/jedi-vim"]
 	path = pack/bundle/start/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim
+[submodule "pack/bundle/start/syntastic"]
+	path = pack/bundle/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic
