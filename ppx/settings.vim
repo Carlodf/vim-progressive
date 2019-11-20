@@ -99,6 +99,15 @@ let g:netrw_browse_split = 4        " open file in previouw viewport
 let g:netrw_altv = 1                " open in vertical viewport
 let g:netrw_winsize = 85            " netrw split size to 15% of the width
 
+" jedi settings----------------------------------------------------------- {{{1
+let g:jedi#use_splits_not_buffers = "right"
+let g:jedi#goto_command = "<leader>gd"
+let g:jedi#goto_assignments_command = "<leader>gg"
+let g:jedi#goto_definitions_command = "<leader>g]"
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>gu"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>gr"
 
 " status line ------------------------------------------------------------ {{{1
 if exists('g:loaded_fugitive')

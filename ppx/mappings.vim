@@ -40,13 +40,6 @@ nnoremap <silent> <leader>tf :call ToggleFullscreenWindows()<CR>
 " Python ----------------------------------------------------------------- {{{2
 augroup python_file_group_mapppings
     autocmd!
-    autocmd FileType python nnoremap <buffer> <leader>gd :YcmCompleter GoToDefinition<CR>
-    autocmd FileType python nnoremap <buffer> <leader>g] :YcmCompleter GoToDeclaration<CR>
-    autocmd FileType python nnoremap <buffer> <leader>gg :YcmCompleter GoTo<CR>
-    autocmd FileType python nnoremap <buffer> <leader>gt :YcmCompleter GetType<CR>
-    autocmd FileType python nnoremap <buffer> <leader>gf :YcmCompleter FixIt<CR>
-    autocmd FileType python nnoremap <buffer> <leader>gr :YcmCompleter GoToReferences<CR>
-    autocmd FileType python nnoremap <buffer> <leader>gh :YcmCompleter GetDoc<CR>
 augroup END
 
 " DISABLED---------------------------------------------------------------- {{{1

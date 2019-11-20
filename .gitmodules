@@ -10,6 +10,6 @@
 [submodule "pack/YouCompleteMe"]
 	path = pack/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
-[submodule "pack/bundle/start/ycm"]
-	path = pack/bundle/start/ycm
-	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "pack/bundle/start/jedi-vim"]
+	path = pack/bundle/start/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim
